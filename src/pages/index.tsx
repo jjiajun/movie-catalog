@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import Head from 'next/head';
 import React from 'react';
+import Navbar from '../components/NavBarComponent';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        Hello
+        <Navbar />
       </main>
     </>
   );
