@@ -15,14 +15,12 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
     ],
     "rules": {
         "react/jsx-props-no-spreading": "off",
         "import/no-unresolved": "error"
-    },
-    
+    }    
 }

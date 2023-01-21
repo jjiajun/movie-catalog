@@ -1,6 +1,8 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/jsx-filename-extension */
 import Head from 'next/head';
 import React from 'react';
+import MovieGridComponent from '../components/MovieGridComponent';
 import Navbar from '../components/NavBarComponent';
 
 export default function Home() {
@@ -14,6 +16,7 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
+        <MovieGridComponent />
       </main>
     </>
   );
