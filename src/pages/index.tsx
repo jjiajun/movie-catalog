@@ -2,10 +2,24 @@
 /* eslint-disable react/jsx-filename-extension */
 import Head from 'next/head';
 import React from 'react';
-import MovieGridComponent from '../components/MovieGridComponent';
-import Navbar from '../components/NavBarComponent';
+import MovieGridComponent from '@/components/MovieGridComponent';
+import Navbar from '@/components/NavBarComponent';
+import { GetServerSideProps } from 'next'
+import axios from 'axios';
 
-export default function Home() {
+interface Data {
+  "name": string,
+  "productionYear": number,
+  "genre": string,
+  "synopsisShort": string,
+  "synopsis": string,
+ }
+
+ interface HomeProps {
+  data: Data[]
+ }
+
+export default function Home({data}: HomeProps) {
   return (
     <>
       <Head>
@@ -16,8 +30,21 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
-        <MovieGridComponent />
+        <MovieGridComponent {...{data}} />
       </main>
     </>
   );
+}
+
+
+export const getServerSideProps: GetServerSideProps<{ data: Data[] }> = async (context) => {
+  const { data } = await axios.get('https://remarkable-bombolone-51a3d9.netlify.app/.netlify/functions/movies')
+
+  // Get movie images and append to data
+  
+  return {
+    props: {
+      data
+    },
+  }
 }
