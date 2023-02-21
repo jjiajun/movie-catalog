@@ -15,6 +15,9 @@ module.exports = {
         // secondary: '#',
         background: '#FAFAFC',
       },
+      fontFamily: {
+        sans: ['Bebas Neue', 'sans-serif'],
+      },
     },
   },
   plugins: [

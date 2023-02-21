@@ -7,7 +7,12 @@ import React from 'react';
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bebas+Neue"
+        />
+      </Head>
       <body>
         <Main />
         <NextScript />

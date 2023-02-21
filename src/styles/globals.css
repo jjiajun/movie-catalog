@@ -29,7 +29,7 @@ VARIANTS:
     @apply box-border
   }
   h1 {
-    @apply text-3xl font-semibold text-gray-900
+    @apply text-5xl font-semibold text-gray-900
   }
   h2 {
     @apply text-2xl font-semibold text-gray-900
@@ -43,13 +43,13 @@ VARIANTS:
   a {
    @apply underline text-blue-600 hover:text-blue-800 cursor-pointer
   }
-  p, h1, h2, h3, h4 {
+  /* p, h1, h2, h3, h4 {
     @apply mb-4
-  }
+  } */
 
-  body {
+  /* body {
     @apply bg-background
-  }
+  } */
 }
 
 @layer components {
